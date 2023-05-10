@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+    <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="estilo.css" />
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="conteudo">
+        <div class="formulario">
+            <form method="" action="">
+                <div>
+                    <h2 class="cabecalho">Calculadora</h2>
+                </div>
+                <div class="campo">
+                    <label>Valor 1:</label>
+                    <input type="text" id="txtValor1">
+                </div>
+                <div class="campo">
+                    <label>Valor 2:</label>
+                    <input type="text" id="txtValor2">
+                </div>
+                <div class="campo">
+                    <label>Operação:</label>
+                    <select name="cbxOperacao" id="cbxOperacao">
+                        <option value="+">Adição</option>
+                        <option value="-">Subtração</option>
+                        <option value="/">Divisão</option>
+                        <option value="*">Multiplicação</option>
+                    </select>
+                </div>
+                <div class="botao">
+                    <button type="button" onclick="calcularValores()">Calcular</button>
+                </div>
+                <div class="campo">
+                    <label>Resultado:</label>
+                    <span class="resultado" id="txtResultado">-</span>
+                </div>
+            </form>
+        </div>
+        <script>
+
+            function calcularValores() {
+                let valor1 = parseInt(document.getElementById("txtValor1").value);
+                let valor2 = parseInt(document.getElementById("txtValor2").value);
+                let operador = document.getElementById("cbxOperacao").value;
+                let result;
+
+                switch (operador) {
+                    case "+":
+                        result = valor1 + valor2;
+                        document.getElementById("txtResultado").innerHTML = result;
+                        break;
+                    case "-":
+                        result = valor1 - valor2;
+                        document.getElementById("txtResultado").innerHTML = result;
+                        break;
+                    case "/":
+                        result = valor1 / valor2;
+                        document.getElementById("txtResultado").innerHTML = result;
+                        break;
+                    case "*":
+                        result = valor1 * valor2;
+                        document.getElementById("txtResultado").innerHTML = result;
+                        break;
+
+                }
+            }
+        </script>
+</body>
+
+</html>
