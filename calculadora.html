@@ -42,6 +42,35 @@
                 </div>
             </form>
         </div>
+        <script>
+
+            function calcularValores() {
+                let valor1 = parseInt(document.getElementById("txtValor1").value);
+                let valor2 = parseInt(document.getElementById("txtValor2").value);
+                let operador = document.getElementById("cbxOperacao").value;
+                let result;
+
+                switch (operador) {
+                    case "+":
+                        result = valor1 + valor2;
+                        document.getElementById("txtResultado").innerHTML = result;
+                        break;
+                    case "-":
+                        result = valor1 - valor2;
+                        document.getElementById("txtResultado").innerHTML = result;
+                        break;
+                    case "/":
+                        result = valor1 / valor2;
+                        document.getElementById("txtResultado").innerHTML = result;
+                        break;
+                    case "*":
+                        result = valor1 * valor2;
+                        document.getElementById("txtResultado").innerHTML = result;
+                        break;
+
+                }
+            }
+        </script>
 </body>
 
 </html>
