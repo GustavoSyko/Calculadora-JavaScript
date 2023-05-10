@@ -2,4 +2,4 @@
 Estudo de curso básico
 Primeiro desafio do curso básico de back-end.
 Site abaixo 
-syko-js-calculator.netlify.app
+https://syko-js-calculator.netlify.app
